@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>My Project Has the Best Title</title>
+	<!--This is a comment that won't be visible in your browser-->
+	<!--You use them to leave notes about the markup-->
+	<!--Below is the way you create an "internal stylesheet"-->
+	<style>
+/*This is how you make comments inside of a stylesheet. It's a little different than basic html comments*/
+/* The "html" style selector below refers to the global properties of this html document. Here, we use it to tell browsers to display an image in the background and to display it in proportion while covering the entire background*/
+html {
+	background: url(pics/IMG_8931.JPG) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+/* The selector below is one I created called "myText" to control an element in the html document, in this case some text. The "#" means that this is an ID. The ID of an element is unique within a page, so the ID selector is used to select one unique element, rather than multiple ones. IMPORTANT - ID elements cannot begin with a number! */
+#myText {
+	display:block;
+	position:absolute;
+	top:50%;
+	left:25%;
+		}
+/*The selector below will add properties to the paragraph text within the myText div*/
+#myText p{		
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	color:#222;
+	font-size:1em;
+		}
+/*The selector below will add properties to links within the myText div. Unvisited and visited links will have the same properties, and different ones when hovered over.*/
+#myText a:link, #myText a:visited{
+	color:#ffffff;
+	background-color:#333333;
+	text-decoration:none;
+	padding:3px;
+		}
+#myText a:hover{
+	color:deeppink;
+	background-color:#ffffff;
+		}
+/*This next selector will be used to style an image in the html*/
+#blackbird{
+display:block;
+	position:absolute;
+	bottom:0;
+	right:0;
+	width:25%;		
+		}
+
+</style>
+<!--the tag above closes the stylesheet-->
+</head>
+<!--the body tag below is where visible parts of your markup begin-->
+<body>
+	<!--Below you'll see some text surrounded by paragraph tags <p></p>-->
+<div id="myText"><p>Tons of corn poured into <a href="index.html">the ship</a></p>
+<p>Its <a href="unstyled.html">dust</a> clouded the sky</p></div>
+	<!--You almost always close html elements around their respective contents. There are some exceptions, like <img> tags that contain the content WITHIN the tag itself. You also always close tags in a "nested" manner, meaning they open and close symmetrically.-->
+	<!--for the image below, I'm going to use the ID "blackbird" to style the image-->
+<a href="index.html"><img src="pics/blackbird.png" id="blackbird" /></a>
+</html>
